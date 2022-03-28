@@ -1,45 +1,41 @@
 package 정렬;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
 public class back1181 {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
 
-        int n = sc.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        int n = Integer.parseInt(br.readLine());
         String[] str = new String[n];
 
-        sc.nextLine();//개행버림
-
         for (int i = 0; i < n; i++) {
-
-            str[i] = sc.nextLine();
+            str[i] = br.readLine();
         }
-
         Arrays.sort(str, new Comparator<String>() {
             @Override
-            public int compare(String s1, String s2) {
-                //단어 길이 같을 경우
-                if (s1.length() == s2.length()) {
-                    return s1.compareTo(s2); //s1우선
-                }
-                //그외
-                else {
-                    return s1.length() - s2.length();
-                }
+            public int compare(String o1, String o2) {
+                if (o1.length() == o2.length()) {
+                    return o1.compareTo(o2);
+                }return o1.length() - o2.length();
             }
         });
-        //compare 양의 정수 리턴할 경우 위치바꾸고 0, 음수일경우 위치 안바꿈
+        StringBuilder sb = new StringBuilder();
 
-        System.out.println(str[0]);
+        sb.append(str[0]).append('\n');
 
         for (int i = 1; i < n; i++) {
-            //중복되지 안흔ㄴ 경우만
-            if (!str.equals(str[i - 1])) System.out.println(str[i]);
+            if(!str[i].equals(str[i-1])){
+                sb.append(str[i]).append('\n');
+            }
         }
+        System.out.println(sb);
     }
 }
