@@ -1,4 +1,4 @@
-package code0327;
+package 코드복습.code0327;
 
 import java.io.BufferedReader;
 import java.io.IOException;

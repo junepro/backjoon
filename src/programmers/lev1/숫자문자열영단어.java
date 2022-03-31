@@ -1,4 +1,4 @@
-package programmers;
+package programmers.lev1;
 
 public class 숫자문자열영단어 {
     public int solution(String s) {

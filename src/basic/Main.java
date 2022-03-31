@@ -7,27 +7,18 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
+    static int[][] map;
+    static boolean[][][] visited;
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
+    static int n, m, cnt;
 
-    public static void main(String[] args) {
+
+    public int solution(int n, int[] lost, int[] reserve) {
+        int answer = 0;
+        return answer;
+
 
     }
 
-}
-
-class solution{
-    public int solution(int[] lottos, int[] win_nums) {
-        int cnt = 0;
-        int max = 0;
-        int[] answer = new int[];
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 6; j++) {
-                if (lottos[i]==win_nums[j]) cnt++;
-            }
-            if(lottos[i]==0) max = cnt + 1;
-        }
-
-        return
-
-        return
-    }
 }

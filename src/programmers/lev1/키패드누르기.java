@@ -1,11 +1,11 @@
-package programmers;
+package programmers.lev1;
 
 public class 키패드누르기 {
     public String solution(int[] numbers, String hand) {
         String answer = "";
 
         StringBuilder sb = new StringBuilder();
-        int left = 10, right = 12;
+        int left = 10, right = 12; //시작위치 초기화
         int l_dis, r_dis;
         for (int n : numbers) {
             if (n == 1 || n == 4 || n == 7) {
