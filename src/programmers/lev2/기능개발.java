@@ -1,4 +1,4 @@
-package programmers;
+package programmers.lev2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,8 @@ public class 기능개발 {
             Stack<Integer> stack = new Stack<Integer>();
 
             for (int i = progresses.length - 1; i >= 0; i--) {
-                stack.add((100 - progresses[i]) / speeds[i] + ((100 - progresses[i]) % speeds[i] > 0 ? 1 : 0));
+                stack.add((100 - progresses[i]) / speeds[i]
+                        + ((100 - progresses[i]) % speeds[i] > 0 ? 1 : 0));
             }//9 4 7
 
             List<Integer> s = new ArrayList<>();
